@@ -25,6 +25,9 @@
         #home{
             background-image: url(photos/background.png);
         }
+        #projects{
+            height: 10vh;
+        }
         header::after {
             content: "";
             position: absolute;
@@ -202,7 +205,47 @@
         links ul li img:hover {
             background: rgba(255, 255, 255, 0.8);
             
+            
         }
+        main h2{
+            font-size: 1.5rem;
+        }
+        .projects h1{
+            color: #ffcc00;
+            font-size: 3rem;
+            margin-top: 50px;
+            padding: 0 90px;
+        }
+        .projects section{
+            transition: 0.7s ease;
+            outline: none;
+        }
+        .projects section:hover{
+            transform: scale(1.01);
+            outline: 5px solid #ffcc00 ;
+        }
+        .projects section img{
+            background-color: #ffcc00; 
+            text-decoration: none;
+            padding: 0.5rem;
+            border-radius: 6px;
+            margin-right: 40px;
+           
+        }
+        .read-btn{
+            margin-top: 10px;
+            display:inline-block;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            border-radius: 6px;
+            font-size: 15px;
+            padding: 5px 10px;
+            background: #ffcc00;
+            position: relative;
+            cursor: pointer;
+        }
+    
+        
 
         /* Footer Styling */
         footer {
@@ -215,4 +258,5 @@
             box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
             margin-top: 30px;
         }
+
     
