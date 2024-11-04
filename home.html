@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <!-- Header Section -->
-    <header>
+    <header id="home">
         <div class="container">
             <nav>
-                <img src="photos/logo.png" alt="imges">
+                <img src="photos/logo.png" alt="imges" height="50" width="0">
                 <ul>
                     <li><a href="home.html">Home</a></li>
                     <li><a href="projects.html">Projects</a></li>
@@ -34,20 +33,39 @@
     <!-------------About------------->
     
     
-        <section>
+        <section class="about">
             <h2>About Me</h2>
-            <p>As a computer science student, I focus on programming and software development, gaining practical skills that enhance my problem-solving abilities. Alongside my studies, I serve as a Leo Club president, where I develop leadership and teamwork skills through community initiatives. Additionally, I’m a dedicated karate player, which fosters discipline and resilience that I apply in both my academic and extracurricular pursuits.</p>
-            <p>Feel free to explore my projects and get to know more about me.</p>
+            <p>As a computer science Undergraduate, I focus on programming and software development, gaining practical skills that enhance my problem-solving abilities.<br> Alongside my studies, I serve as a Leo Club president, where I develop leadership and teamwork skills through community initiatives.<br> Additionally, I’m a dedicated karate player, which fosters discipline and resilience that I apply in both my academic and extracurricular pursuits.</p>
+            <p style="color: #ffcc00;">Feel free to know more about me.</p>
+            <links>
+        
+                <ul>
+                    <li><a href="https://twitter.com/youraccount" target="_blank"><img src="photos/linkedin_logo.png"  id="linkedin" height="50" width="50"></a></li>
+                    <li><a href="https://github.com/youraccount" target="_blank"><img src="photos/github_logo.png"  id="git" height="50" width="50"></a></li>
+                    <li><a href="https://linkedin.com/in/youraccount" target="_blank"><img src="photos/insta_logo.png"  id="insta" height="50" width="50"></a></li>
+                </ul>
+            </links>
         </section>
 
-        <aside>
-            <h3>Follow Me</h3>
-            <ul>
-                <li><a href="https://twitter.com/youraccount" target="_blank">Twitter</a></li>
-                <li><a href="https://github.com/youraccount" target="_blank">GitHub</a></li>
-                <li><a href="https://linkedin.com/in/youraccount" target="_blank">LinkedIn</a></li>
-            </ul>
-        </aside>
+        <section class="skills">
+            <h2>My Skills</h2>
+                <ul>
+                    <li><h3>Programming</h3></li>
+                    <p><img src="photos/python.webp"  id="python" height="50" width="50"></p>
+                    <p><img src="photos/css.png"  id="css" height="50" width="50"></p>
+                    <p><img src="photos/html.png"  id="html" height="50" width="50"></p>
+                    <p><img src="photos/Java.webp"  id="java" height="50" width="50"></p>
+                    <p><img src="photos/bootstrap.png"  id="bootstrap" height="50" width="50"></p>
+                    <p><img src="photos/javascript.png"  id="javascript" height="50" width="50"></p>
+
+                    
+                    
+                    <li><h3>Social Skills</h3></li>
+                    <p>I have strong social skills, valuing open communication and active listening to create a welcoming, collaborative environment. Adaptable and encouraging, I build trust and motivate others toward shared goals, whether in teams, projects, or community service.</p>
+                    
+                </ul>
+        </section>
+
     </main>
 
     <!-- Footer Section -->

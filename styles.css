@@ -15,12 +15,15 @@
         }
 
         /* Header Styling */
+       
         header {
             width: 100%;
             height: 100vh;
-            background-image: url(photos/background.png);
             background-size: cover;
             overflow: hidden;
+        }
+        #home{
+            background-image: url(photos/background.png);
         }
         header::after {
             content: "";
@@ -81,8 +84,8 @@
         
 
         nav img{
-            width: 140px;
-            height: 120px;
+            width: 110px;
+            height: 100px;
             align-items: center;
             
         }
@@ -126,7 +129,7 @@
         /* Section Styling */
         section {
     
-            width: 70%;
+            width: 80%;
             margin: 40px auto;
             padding: 20px;
             border-radius: 12px;
@@ -141,37 +144,54 @@
             margin-bottom: 10px;
         }
 
+        section h3{
+            font-size: 1.5rem;
+        }
+
         section p {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             color: #ffffff;
             line-height: 1.8;
-            margin-bottom: 20px;
+            margin-top: 20px;
         }
 
-        /* Sidebar (Aside) Styling */
-        aside {
+        .skills p{
+            display: inline;
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+        .skills h3{
+            margin-bottom: 5px;
+            margin-top: 25px;
+        }
+        .skills img{
+            background-color: #ffcc00; 
+            padding: 0.5rem;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+        .skills img:hover{
+            background: rgba(255, 255, 255, 0.8);
+        }
+        
 
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        /* links Styling */
+        links {
+            padding: 10px;
         }
 
-        aside h3 {
-            font-size: 1.5rem;
-            color: #080806;
-            margin-bottom: 1rem;
-        }
-
-        aside ul {
+        links ul {
             list-style-type: none;
         }
 
-        aside ul li {
-            margin-bottom: 0.8rem;
+        links ul li {
+            display: inline;
+            padding: 0px 50px;
+
         }
 
-        aside ul li a {
-            color: #1d4ed8;
+        links ul li img {
+            background-color: #ffcc00; 
             font-weight: 600;
             text-decoration: none;
             padding: 0.5rem;
@@ -179,17 +199,17 @@
             transition: background 0.3s ease;
         }
 
-        aside ul li a:hover {
-            background: #e0e7ff;
-            color: #2563eb;
+        links ul li img:hover {
+            background: rgba(255, 255, 255, 0.8);
+            
         }
 
         /* Footer Styling */
         footer {
             text-align: center;
             padding: 15px 0;
-            background-color: #1d3557;
-            color: white;
+            background-color: #ffcc00;
+            color: rgb(0, 0, 0);
             font-size: 0.9rem;
             letter-spacing: 0.5px;
             box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
