@@ -10,12 +10,14 @@
     <header id="projects">
         <div class="container">
             <nav>
-                <img src="photos/logo.png" alt="imges" height="50" width="0">
+                <img src="photos/logo.png" alt="logo">
                 <ul>
                     <li><a href="home.html">Home</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+                <span id="menu-btn">&#9776;</span>
+                <span id="close-menu-btn">&times;</span>
             </nav>
         </div>
     </header>
@@ -25,25 +27,22 @@
         <section>
             <h2>Plane Seat Management</h2>
             <p>This Java project, PlaneManagement, is a seat reservation system for an airplane. It allows users to book, cancel, and search for seats, view seating plans, and check ticket information. It features input validation, ticket tracking, and a simple menu interface.</p>
-            
             <img src="photos/Java.webp"  id="java" height="50" width="50"><br>
-            <a href="content.html" class="read-btn">Code</a>
+            <a href="https://github.com/Nimsarafx/Plane-Seat-management" class="read-btn">Code</a>
         </section>
         <section>
             <h2>Student Marks Calculator</h2>
-            <p>This python program tracks and visualizes student progression outcomes by collecting user input for credit scores in various categories. Based on the input, it calculates progression outcomes, displays a histogram, and saves results for later reference.</p>
-            
+            <p>This python program tracks and visualizes student progression outcomes by collecting user input for credit scores in various categories. Based on the input, it calculates progression outcomes, displays a histogram, and saves results for later reference.</p>          
             <img src="photos/python.webp"  id="java" height="50" width="50"><br>
-            <a href="content.html" class="read-btn">Code</a>
+            <a href="https://github.com/Nimsarafx/Student-marks-calculator" class="read-btn">Code</a>
         </section>
         <section>
             <h2>Health Awareness Webpage</h2>
             <p>This health awareness webpage serves as a comprehensive resource for individuals seeking information on wellness topics. It offers articles, tips, and interactive tools on nutrition, fitness, mental health, and disease prevention, empowering users to make informed health decisions for a better lifestyle.</p>
-            
             <img src="photos/html.png"  id="java" height="50" width="50">
             <img src="photos/css.png"  id="java" height="50" width="50">
             <img src="photos/javascript.png"  id="java" height="50" width="50"><br>
-            <a href="content.html" class="read-btn">Code</a>
+            <a href="https://github.com/Nimsarafx/Health-awareness-Web-Page" class="read-btn">Code</a>
         </section>
         <section>
             <h2>Coffee Shop</h2>
@@ -59,5 +58,20 @@
     <footer>
         <p>&copy;  2024 All rights reserved.</p>
     </footer>
+
+    <script>
+        const header = document.querySelector("header");
+        const menuBtn = document.querySelector("#menu-btn");
+        const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+        menuBtn.addEventListener("click", () => {
+            header.classList.add("show-mobile-menu");
+        });
+
+        closeMenuBtn.addEventListener("click", () => {
+            header.classList.remove("show-mobile-menu");
+        });
+
+    </script>
 </body>
 </html>

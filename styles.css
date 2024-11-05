@@ -7,8 +7,8 @@
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
         }
+        /*Home Styling*/
 
-        /* Body Styling */
         body {
            background: #000000;
            color: #fff;
@@ -25,9 +25,7 @@
         #home{
             background-image: url(photos/background.png);
         }
-        #projects{
-            height: 10vh;
-        }
+     
         header::after {
             content: "";
             position: absolute;
@@ -125,10 +123,65 @@
         nav ul li a:hover {
             color: #ffcc00; /* Change color on hover */
         }
-
-        /* Main Content Section */
-       
-
+        #menu-btn{
+            display: none;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+        }
+        #close-menu-btn{
+            display: none;
+            position: absolute;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            top: 20px;
+            right: 0px;
+            left: 0px;
+        }
+        
+        #menu-btn, #close-menu-btn {
+            display: none;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        @media screen and (max-width: 768px) {
+            /* Show mobile menu button */
+            #menu-btn, #close-menu-btn {
+                display: block;
+            }
+        
+            /* Hide nav links on mobile */
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 250px;
+                height: 100vh;
+                background: #000;
+                padding: 60px 20px;
+            }
+        
+            /* Show nav when active */
+            header.show-mobile-menu nav ul {
+                display: flex;
+            }
+        }
+        @media screen and (max-width: 960px){
+            header{
+                height: 70vh;
+                margin-bottom: 50px;
+            }
+        }
+        @media screen and (max-width: 690px){
+            header{
+                height: 40vh;
+                margin-bottom: 50px;
+            }
+        }
         /* Section Styling */
         section {
     
@@ -204,11 +257,15 @@
 
         links ul li img:hover {
             background: rgba(255, 255, 255, 0.8);
+
             
-            
+        /*Project Styling*/  
         }
         main h2{
             font-size: 1.5rem;
+        }
+        #projects{
+            height: 10vh;
         }
         .projects h1{
             color: #ffcc00;
@@ -223,6 +280,7 @@
         .projects section:hover{
             transform: scale(1.01);
             outline: 5px solid #ffcc00 ;
+            box-shadow: 10px 10px 20px rgba(255, 208, 1, 0.5); ;
         }
         .projects section img{
             background-color: #ffcc00; 
@@ -244,19 +302,162 @@
             position: relative;
             cursor: pointer;
         }
-    
+        .read-btn:hover{
+            transform: scale(1.1);
+            outline: 2px solid #ffffff ;
+            background-color: #ffb700;
+            
+        }
+        @media screen and (max-width: 768px) {
+            .projects h1 {
+                font-size: 2rem; 
+                padding: 0 10%; 
+            }
         
+            .projects section {
+                margin: 20px 0; 
+            }
+        
+            .read-btn {
+                font-size: 0.9rem; 
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .projects h1 {
+                font-size: 1.5rem; 
+                padding: 0 5%; 
+            }
+        
+          
+        
+            .read-btn {
+                font-size: 0.8rem; 
+                padding: 5px 8px; 
+            }
+        }
+        
+        
+        #contact {
+            height: 10vh;
+        }
+
+       
+        main.contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+      
+        .contact_form section {
+            width: 100%; 
+            max-width: 600px; 
+            padding: 20px;
+            background-color: #242424;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+       
+
+        /* Form elements styling */
+
+        form label, form input, form textarea, form button {
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border: 1px solid #ce3a3a;
+            border-radius: 4px;
+        }
+
+        form button {
+            padding: 10px;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #ffb700;
+        }
+        .contact img{
+            display: inline-block;
+        }
+        .contact_form section ul {
+            display: flex; 
+            justify-content: center; 
+            padding: 0; 
+            margin: 20px 0; 
+            list-style-type: none; 
+        }
+        
+        
+        .contact_form section ul li {
+            margin: 0 10px;
+            background-color: #ffcc00; 
+            text-decoration: none;
+            padding: 0.4rem;
+            border-radius: 6px;
+            margin-right: 30px;
+            transition: 0.7s;
+
+        }
+        .contact_form section ul li:hover{
+            background-color: #fff;
+        }
+
+        
+        
+
+        @media screen and (max-width: 768px) {
+            main.contact {
+                margin-bottom: 55px;
+        
+             
+
+            }
+            form label, form input, form textarea, form button{
+                padding: auto;
+
+            }
+        
+            .contact_form section {
+                padding: 15px;
+            }
+        }
+            
+        
+        
+        @media screen and (max-width: 480px) {
+            form input, form textarea {
+                padding: 8px; 
+            }
+        
+            form button {
+                padding: 8px; 
+        
+            .contact_form section {
+                width: 95%; 
+            }
+        }
+    }
 
         /* Footer Styling */
         footer {
             text-align: center;
             padding: 15px 0;
-            background-color: #ffcc00;
+            background-image:  linear-gradient(#000000, #ffcc00);
             color: rgb(0, 0, 0);
             font-size: 0.9rem;
             letter-spacing: 0.5px;
             box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
             margin-top: 30px;
         }
-
+        
     

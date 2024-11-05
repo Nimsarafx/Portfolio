@@ -9,27 +9,30 @@
 <body>
 
     <!-- Header Section -->
+   <!-- Header Section -->
     <header id="home">
         <div class="container">
             <nav>
-                <img src="photos/logo.png" alt="imges" height="50" width="0">
+                <img src="photos/logo.png" alt="logo">
                 <ul>
                     <li><a href="home.html">Home</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+                <span id="menu-btn">&#9776;</span>
+                <span id="close-menu-btn">&times;</span>
             </nav>
             <div class="header-text">
                 <h1>Hi, I'm Nimsara Mahith</h1>
-                <h2>I am a
-                    <span style="--i:4;" data-text="ifug">ifug</span>
-                    <span style="--i:3;" data-text="wg">wg</span>
-                    <span style="--i:2;" data-text="wgr">wgr</span>
-                    <span style="--i:1;" data-text="warg">warg</span>
-                </h2>
+                <h2>I am a 
+                    <span style="--i:4;" data-text=" Developer"> Developer</span>
+                    <span style="--i:3;" data-text=" Developer"> Developer</span>
+                    <span style="--i:2;" data-text=" Developer"> Developer</span>
+                    <span style="--i:1;" data-text=" Developer"> Developer</span>
             </div>
         </div>
     </header>
+
     <!-------------About------------->
     
     
@@ -40,9 +43,9 @@
             <links>
         
                 <ul>
-                    <li><a href="https://twitter.com/youraccount" target="_blank"><img src="photos/linkedin_logo.png"  id="linkedin" height="50" width="50"></a></li>
-                    <li><a href="https://github.com/youraccount" target="_blank"><img src="photos/github_logo.png"  id="git" height="50" width="50"></a></li>
-                    <li><a href="https://linkedin.com/in/youraccount" target="_blank"><img src="photos/insta_logo.png"  id="insta" height="50" width="50"></a></li>
+                    <li><a href="https://www.linkedin.com/in/nimsara-mahith-480170260/" target="_blank"><img src="photos/linkedin_logo.png"  id="linkedin" height="50" width="50"></a></li>
+                    <li><a href="https://github.com/Nimsarafx" target="_blank"><img src="photos/github_logo.png"  id="git" height="50" width="50"></a></li>
+                    <li><a href="https://www.instagram.com/accounts/login/" target="_blank"><img src="photos/insta_logo.png"  id="insta" height="50" width="50"></a></li>
                 </ul>
             </links>
         </section>
@@ -72,5 +75,19 @@
     <footer>
         <p>&copy; 2024 All rights reserved.</p>
     </footer>
+    <script>
+        const header = document.querySelector("header");
+        const menuBtn = document.querySelector("#menu-btn");
+        const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+        menuBtn.addEventListener("click", () => {
+            header.classList.add("show-mobile-menu");
+        });
+
+        closeMenuBtn.addEventListener("click", () => {
+            header.classList.remove("show-mobile-menu");
+        });
+
+    </script>
 </body>
 </html>
