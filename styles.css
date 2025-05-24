@@ -16,7 +16,7 @@
 
         /* Header Styling */
        
-        header {
+        header {     /*Structural selector*/
             width: 100%;
             height: 100vh;
             background-size: cover;
@@ -26,7 +26,7 @@
             background-image: url(photos/background.png);
         }
      
-        header::after {
+        header::after {        /*Pseudo elements with generated content */
             content: "";
             position: absolute;
             bottom: 0;
@@ -37,7 +37,7 @@
             filter: blur(20px);
             transform: translateY(70px);
         }
-        .header-text{
+        .header-text:not(p){   /*Negation pseudo class*/
             margin-top: 12%;
             margin-left: 10%;
             font-size: 30px;
@@ -48,21 +48,21 @@
           
         }
 
-        .header-text h2 span{
+        .header-text h2 span{ 
             position: relative;
             display: inline block;
             color: transparent;
-            -webkit-text-stroke: 1px #ffcc00;
+            -webkit-text-stroke: 1px #ffcc00;  /*Text effect*/
             animation: display-text 16s linear infinite;
             animation-delay: calc(-4s * var(--i));
         }
-        @keyframes display-text{
+        @keyframes display-text{  /*Text effect*/
             25%,100%{
                 display: none;
             }
         }
-        .header-text h2 span::before{
-            content: attr(data-text);
+        .header-text h2 span::before{    /*Pseudo elements with generated content */
+            content: attr(data-text);   /*Text effect*/
             position:absolute;
             width: 0;
             border-right: 2px solid #ffcc00;
@@ -71,8 +71,8 @@
             overflow: hidden;
             animation: fill-text 4s linear infinite;
         }
-        @keyframes fill-text{
-            10%,
+        @keyframes fill-text{     /*Text effect*/
+            10%,  
             100%{
                 width: 0;
             }
@@ -91,7 +91,7 @@
             
         }
 
-        nav{
+        nav{      /*Structural selector*/
 
             display:flex ;
             align-items: center;
@@ -117,10 +117,10 @@
             color: white;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease;     /*Transition*/
         }
 
-        nav ul li a:hover {
+        nav ul li a:hover {       /*user action pseudo class*/
             color: #ffcc00; /* Change color on hover */
         }
         #menu-btn{
@@ -178,12 +178,13 @@
         }
         @media screen and (max-width: 690px){
             header{
-                height: 40vh;
+                height: 50vh;
                 margin-bottom: 50px;
+                filter: blur(0);
             }
         }
         /* Section Styling */
-        section {
+        section {     /*Structural selector*/
     
             width: 80%;
             margin: 40px auto;
@@ -224,9 +225,9 @@
             background-color: #ffcc00; 
             padding: 0.5rem;
             border-radius: 6px;
-            transition: background 0.3s ease;
+            transition: background 0.3s ease;   /*Transition*/
         }
-        .skills img:hover{
+        .skills img:hover{     /*user action pseudo class*/
             background: rgba(255, 255, 255, 0.8);
         }
         
@@ -255,7 +256,7 @@
             transition: background 0.3s ease;
         }
 
-        links ul li img:hover {
+        links ul li img:hover {        /*user action pseudo class*/
             background: rgba(255, 255, 255, 0.8);
 
             
@@ -274,13 +275,13 @@
             padding: 0 90px;
         }
         .projects section{
-            transition: 0.7s ease;
+            transition: 0.7s ease;        /*Transition*/
             outline: none;
         }
-        .projects section:hover{
-            transform: scale(1.01);
+        .projects section:hover{           /*user action pseudo class*/
+            transform: scale(1.01);        /*Transform*/
             outline: 5px solid #ffcc00 ;
-            box-shadow: 10px 10px 20px rgba(255, 208, 1, 0.5); ;
+            box-shadow: 10px 10px 20px rgba(255, 208, 1, 0.5); /*Shadow*/
         }
         .projects section img{
             background-color: #ffcc00; 
@@ -301,9 +302,9 @@
             background: #ffcc00;
             position: relative;
             cursor: pointer;
-        }
-        .read-btn:hover{
-            transform: scale(1.1);
+        } 
+        .read-btn:hover{            /*user action pseudo class*/
+            transform: scale(1.1);        /*Transform*/
             outline: 2px solid #ffffff ;
             background-color: #ffb700;
             
@@ -343,7 +344,7 @@
         }
 
        
-        main.contact {
+        main.contact {           /*Structural selector*/
             display: flex;
             justify-content: center;
             align-items: center;
@@ -383,7 +384,7 @@
             cursor: pointer;
         }
 
-        form button:hover {
+        form button:hover {           /*user action pseudo class*/
             background-color: #ffb700;
         }
         .contact img{
@@ -408,7 +409,7 @@
             transition: 0.7s;
 
         }
-        .contact_form section ul li:hover{
+        .contact_form section ul li:hover{           /*user action pseudo class*/
             background-color: #fff;
         }
 
@@ -449,7 +450,7 @@
     }
 
         /* Footer Styling */
-        footer {
+        footer {                   /*Structural selector*/
             text-align: center;
             padding: 15px 0;
             background-image:  linear-gradient(#000000, #ffcc00);
