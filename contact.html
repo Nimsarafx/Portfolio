@@ -3,67 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Contact Me</title> <!-- Title of the page -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS stylesheet -->
 </head>
 <body>
+    <!-- Header Section -->
     <header id="contact">
         <div class="container">
             <nav>
-                <img src="photos/logo.png" alt="logo">
+                <img src="photos/logo.png" alt="logo"> <!-- Logo image -->
                 <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="home.html">Home</a></li> <!-- Link to Home page -->
+                    <li><a href="projects.html">Projects</a></li> <!-- Link to Projects page -->
+                    <li><a href="contact.html">Contact</a></li> <!-- Link to Contact page -->
                 </ul>
-                <span id="menu-btn">&#9776;</span>
-                <span id="close-menu-btn">&times;</span>
+                <span id="menu-btn">&#9776;</span> <!-- Menu button for mobile view -->
+                <span id="close-menu-btn">&times;</span> <!-- Close button for mobile menu -->
             </nav>
         </div>
     </header>
+
+    <!-- Main Content Section -->
     <main class="contact">
         <div class="contact_form">
             <section>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
+                <form>
+                    <label for="name">Name:</label> <!-- Label for name input -->
+                    <input type="text" id="name" name="name" required><br><br> <!-- Input for name -->
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
+                    <label for="email">Email:</label> <!-- Label for email input -->
+                    <input type="email" id="email" name="email" required><br><br> <!-- Input for email -->
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea><br><br>
+                    <label for="message">Message:</label> <!-- Label for message input -->
+                    <textarea id="message" name="message" required></textarea><br><br> <!-- Textarea for message -->
 
-                <button type="submit">Send</button>
-            </form>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/nimsara-mahith-480170260/" target="_blank"><img src="photos/linkedin_logo.png"  id="linkedin" height="50" width="50"></a></li>
-                <li><a href="https://github.com/Nimsarafx" target="_blank"><img src="photos/github_logo.png"  id="git" height="50" width="50"></a></li>
-                <li><a href="https://www.instagram.com/accounts/login/" target="_blank"><img src="photos/insta_logo.png"  id="insta" height="50" width="50"></a></li>
-            </ul>
-        </section>
+                    <button type="submit">Send</button> <!-- Submit button for the form -->
+                </form>
+
+                <!-- Social Media Links Section -->
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/nimsara-mahith-480170260/" target="_blank"><img src="photos/linkedin_logo.png"  id="linkedin" height="50" width="50" alt="LinkedIn logo"></a></li> <!-- LinkedIn link -->
+                    <li><a href="https://github.com/Nimsarafx" target="_blank"><img src="photos/github_logo.png"  id="git" height="50" width="50" alt="GitHub logo"></a></li> <!-- GitHub link -->
+                    <li><a href="https://www.instagram.com/accounts/login/" target="_blank"><img src="photos/insta_logo.png"  id="insta" height="50" width="50" alt="Instagram logo"></a></li> <!-- Instagram link -->
+                </ul>
+            </section>
         </div>
     </main>
+
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 All rights reserved.</p>
+        <p>&copy; 2024 All rights reserved.</p> <!-- Footer text -->
     </footer>
 
+    <!-- JavaScript for Mobile Menu Functionality -->
     <script>
-        const header = document.querySelector("header");
-        const menuBtn = document.querySelector("#menu-btn");
-        const closeMenuBtn = document.querySelector("#close-menu-btn");
+        const header = document.querySelector("header"); // Select the header element
+        const menuBtn = document.querySelector("#menu-btn"); // Select the menu button
+        const closeMenuBtn = document.querySelector("#close-menu-btn"); // Select the close menu button
 
+        // Event listener to show the mobile menu when the menu button is clicked
         menuBtn.addEventListener("click", () => {
             header.classList.add("show-mobile-menu");
         });
 
+        // Event listener to hide the mobile menu when the close button is clicked
         closeMenuBtn.addEventListener("click", () => {
             header.classList.remove("show-mobile-menu");
         });
-
     </script>
-</body>
-</html>
 </body>
 </html>
